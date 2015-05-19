@@ -1,1 +1,5 @@
-$('#results').html("<%= j render partial: 'results', collection: @results, as: :object %>");
+<%- if @results.any? -%>
+  $('#results').html("<%= j render partial: 'results', collection: @results, as: :object %>");
+<%- else -%>
+  $('#results').html("<li>0 results found.</li>");
+<%- end -%>
