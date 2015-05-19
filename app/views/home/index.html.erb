@@ -1,0 +1,8 @@
+<div style='width: 600px; margin: 0 auto; margin-top: 200px;'>
+  <%= form_tag root_path, method: :get, remote: true do %>
+    <%= text_field_tag(:keyword, nil, {placeholder: 'Search anything...', style: 'padding: 20px; width: 300px; font-size: 18px;'}) %>
+    <%= submit_tag 'Search', style: 'padding: 20px; font-size: 18px;' %>
+  <%-end-%>
+</div>
+
+<ul id="results" style="margin-top: 30px;"></ul>
